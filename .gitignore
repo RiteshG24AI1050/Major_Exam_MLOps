@@ -1,5 +1,6 @@
 # Major_Exam_MLOps
 
+models/*.joblib
 __pypackages__/
 __pycache__/
 *.py[codz]
