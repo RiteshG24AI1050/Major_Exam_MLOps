@@ -1,5 +1,6 @@
 # Major_Exam_MLOps
 
+models/
 models/*.joblib
 __pypackages__/
 __pycache__/
