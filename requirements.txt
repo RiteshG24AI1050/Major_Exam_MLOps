@@ -1,1 +1,9 @@
-# Major_Exam_MLOps
+numpy
+matplotlib
+statsmodels
+scikit-learn
+pandas
+scipy==1.11.4
+statsmodels==0.14.0
+joblib
+pytest
