@@ -1,5 +1,5 @@
 import numpy as np
-from utils import load_model, load_dataset, calculate_metrics
+from src.utils import load_model, load_dataset, calculate_metrics
 
 def main():
     print("Loading trained model.")
