@@ -1,12 +1,12 @@
 # Major\_Exam\_MLOps
 
-Objective
+## Objective
 Build a complete MLOps pipeline focused on Linear Regression only, integrating training, testing,
 quantization, Dockerization, and CI/CD — all managed within a single main branch.
 
-1. Initiated the main branch with .gitignore, requirements.txt and README.md
+## 1. Initiated the main branch with .gitignore, requirements.txt and README.md
 
-2. created the src folder and written train.py file. After training the linearRegression model, I got the below results. And then saved the model using joblib.
+## 2. created the src folder and written train.py file. After training the linearRegression model, I got the below results. And then saved the model using joblib.
 
 Loading California Housing dataset.
 
@@ -16,7 +16,7 @@ Training model.
 
 Model saved to models/linear_regression_model.joblib
 
-## 📊 Model Evaluation Metrics
+## Model Evaluation Metrics
 
 | Metric        | Value     |
 |---------------|-----------|
@@ -29,7 +29,7 @@ Model saved to models/linear_regression_model.joblib
 |----------|--------|
 | 0.5758   | 0.5559 |
 
-3. After that I performed testing using test_train.py file under the tests folder.
+## 3. After that I performed testing using test_train.py file under the tests folder.
 
 python tests/test_train.py
 
@@ -45,7 +45,7 @@ tests/test_train.py::TestTraining::test_model_save_load PASSED                  
 ===================================================================== 5 passed in 0.28s =====================================================================
 
 
-4. Then in the next step I did the manual quantization. I created the quantize.py file under src folder. I have applied quantization quality check and manual predictions on the 10 samples
+## 4. Then in the next step I did the manual quantization. I created the quantize.py file under src folder. I have applied quantization quality check and manual predictions on the 10 samples
 
 python src/quantize.py
 
@@ -98,7 +98,7 @@ Original vs dequant manual:     [1.69724930e-06 1.69119024e-06 1.75485833e-06 1.
 
 
 
-5. Next, I created a Dockerfile. And then created predict.py under src folder to make the predictions.
+## 5. Next, I created a Dockerfile. And then created predict.py under src folder to make the predictions.
 
 Below is the container output once the github actions workflow is successfully executed.
 
@@ -138,7 +138,7 @@ True: 3.40 | Predicted: 2.74 | Diff: 0.66
 
 True: 4.47 | Predicted: 3.92 | Diff: 0.55
 
-6. Below is the performance comparison table
+## 6. Below is the performance comparison table
 
 ## Performance Comparison Table
 
@@ -149,7 +149,7 @@ True: 4.47 | Predicted: 3.92 | Diff: 0.55
 | Model Size            | 1.7 KB         | 0.9 KB           | -0.8 KB      |
 
 
-7. Docker commands used in ci.yml and on every push this workflow will start.
+## 7. Below are the Docker commands used in ci.yml and on every push this CI/CD workflow will start building the image then create and start the container.
 
  docker build -t major-exam-mlops .
 
