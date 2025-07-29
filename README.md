@@ -16,10 +16,14 @@ Training model.
 
 Model saved to models/linear_regression_model.joblib
 
- Model Evaluation
-R² Score:             0.5758
-MSE:                  0.5559
-Model Size:           1.7 KB
+## 📊 Model Evaluation Metrics
+
+| Metric        | Value     |
+|---------------|-----------|
+| R² Score      | 0.5758    |
+| MSE           | 0.5559    |
+| Model Size    | 1.7 KB    |
+
 
 | R² Score | Loss   |
 |----------|--------|
@@ -143,3 +147,10 @@ True: 4.47 | Predicted: 3.92 | Diff: 0.55
 | R² Score              | 0.5758         | 0.5758           | 0.0000       |
 | MSE                   | 0.5559         | 0.5559           | 0.0000       |
 | Model Size            | 1.7 KB         | 0.9 KB           | -0.8 KB      |
+
+
+7. Docker commands used in ci.yml and on every push this workflow will start.
+
+ docker build -t major-exam-mlops .
+
+ docker run --rm major-exam-mlops
